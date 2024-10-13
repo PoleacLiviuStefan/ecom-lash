@@ -5,6 +5,7 @@ import RefinementList from "@modules/store/components/refinement-list"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 
 import PaginatedProducts from "./paginated-products"
+import TopSellingProducts from "./top-selling-products"
 
 const StoreTemplate = ({
   sortBy,
@@ -25,9 +26,9 @@ const StoreTemplate = ({
     >
       <RefinementList sortBy={sort} />
       <div className="flex flex-col items-center justify-center w-full min-h-[150px]">
-        <div className="mb-8 text-2xl-semi w-full text-center bg-[#F9C6E7] min-h-[200px] flex flex-col justify-center items-center">
+        <div className="mb-8 text-2xl-semi w-full text-center bg-primary min-h-[200px] flex flex-col justify-center items-center text-white">
           <h1 data-testid="store-page-title">Magazin</h1>
-          <p className="text-lg font-thin text-gray-600">
+          <p className="text-lg    ">
             Aici poti gasi toate produsele de care ai nevoie
           </p>
         </div>

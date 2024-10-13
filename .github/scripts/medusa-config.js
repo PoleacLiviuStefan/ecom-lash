@@ -60,7 +60,7 @@ export default defineConfig({
     },
   ],
   admin: {
-    backendUrl: "http://localhost:9000",
+    backendUrl: "http://164.92.230.185:9000",
   },
   projectConfig: {
     databaseUrl: DATABASE_URL,

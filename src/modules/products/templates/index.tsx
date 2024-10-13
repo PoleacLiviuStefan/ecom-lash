@@ -1,4 +1,6 @@
-import React, { Suspense } from "react"
+
+
+import React, { Suspense, useState } from "react"
 
 import ImageGallery from "@modules/products/components/image-gallery"
 import ProductActions from "@modules/products/components/product-actions"
@@ -28,12 +30,14 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
     return notFound()
   }
 
+
+
   return (
     <>
     <div className="flex flex-col items-center w-full">
-    <div className="flex flex-col items-center max-w-[900px]">
+    <div className="flex flex-col justify-center w-full lg:w-[1120px]">
       <div
-        className="content-container flex flex-col small:flex-row small:items-start py-6 relative"
+        className="content-container flex flex-col items-center small:flex-row small:items-start small:justify-between py-6 relative"
         data-testid="product-container"
       >
 
@@ -59,8 +63,14 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
           <ProductInfo product={product} />
         </div>
       </div>
+      <ul className="flex flex-col lg:flex-row justify-between lg:w-[500px]">
+              <li className="flex flex-col items-center"><button >Descriere</button><span className="bg-[--primary-color] h-[2px] w-[70px]" /></li>
+              <li className="flex flex-col items-center"><button>Informatii suplimentare</button><span className="bg-black h-[2px] w-[165px]" /></li>
+              <li className="flex flex-col items-center"><button>Recenzii</button><span className="bg-black h-[2px] w-[55px]" /></li>
+      </ul>
+      <span className="my-[20px] w-full bg-gray-300 h-[1px]" />
       <Text
-          className="text-medium text-ui-fg-subtle whitespace-pre-line"
+          className="text-medium text-ui-fg-subtle px-[24px] whitespace-pre-line"
           data-testid="product-description"
         >
           {product.description}
